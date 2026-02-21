@@ -1,0 +1,239 @@
+/* components/Navbar.css */
+.cc-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(248, 247, 255, 0.9);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    height: 64px;
+}
+
+.cc-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.cc-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--purple);
+    flex-shrink: 0;
+    text-decoration: none;
+    letter-spacing: -0.4px;
+}
+
+.cc-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+}
+
+.cc-nav-link {
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--gray);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.cc-nav-link:hover,
+.cc-nav-link.active {
+    background: var(--purple-lt);
+    color: var(--purple);
+}
+
+.cc-nav-link.active {
+    font-weight: 600;
+}
+
+.cc-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cc-notif-btn {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--card-bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    transition: var(--transition);
+}
+
+.cc-notif-btn:hover {
+    background: var(--purple-lt);
+    color: var(--purple);
+}
+
+.cc-notif-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #f97316;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.cc-avatar-wrap {
+    position: relative;
+}
+
+.cc-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), #4f46e5);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.cc-avatar:hover {
+    transform: scale(1.08);
+}
+
+.cc-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cc-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: var(--card-bg);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    min-width: 180px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.cc-dropdown-name {
+    display: block;
+    padding: 12px 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gray);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cc-dropdown-item {
+    display: block;
+    padding: 11px 16px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--dark);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.cc-dropdown-item:hover {
+    background: var(--light-bg);
+    color: var(--purple);
+}
+
+.cc-dropdown-item.danger:hover {
+    background: var(--red-lt);
+    color: var(--red);
+}
+
+.cc-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.cc-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gray);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.cc-hamburger .rotate45 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.cc-hamburger .hidden {
+    opacity: 0;
+}
+
+.cc-hamburger .rotate-45 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .cc-nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        flex-direction: column;
+        padding: 12px;
+        gap: 4px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+    }
+
+    .cc-nav-links.open {
+        display: flex;
+    }
+
+    .cc-nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cc-hamburger {
+        display: flex;
+    }
+}

@@ -1,0 +1,138 @@
+/* pages/Auth.css — Shared login/signup styles */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 58, 237, .12) 0%, transparent 60%),
+        var(--light-bg);
+    padding: 24px;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    border: 1.5px solid var(--border);
+    border-radius: 24px;
+    padding: 44px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: var(--shadow-md);
+    animation: fadeUp .6s ease both;
+}
+
+.auth-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--purple);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.auth-sub {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.auth-error {
+    background: var(--red-lt);
+    color: var(--red);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.auth-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.auth-divider {
+    text-align: center;
+    position: relative;
+    margin: 22px 0;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+}
+
+.auth-divider span {
+    position: relative;
+    background: var(--card-bg);
+    padding: 0 12px;
+    color: var(--gray);
+    font-size: 0.82rem;
+}
+
+.auth-google-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 100px;
+    border: 1.5px solid var(--border);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--dark);
+}
+
+.auth-google-btn:hover {
+    border-color: var(--purple);
+    background: var(--purple-lt);
+    color: var(--purple);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.auth-footer a {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
