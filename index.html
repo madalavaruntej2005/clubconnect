@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ClubConnect — Connect with peers across clubs, showcase your skills, and build a reputation that follows you beyond campus." />
+  <title>ClubConnect — Grow Together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="logo">ClubConnect</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#" class="nav-link active" id="navHome">Home</a>
+        <a href="#discover" class="nav-link" id="navDiscover">Discover</a>
+        <a href="#clubs" class="nav-link" id="navClubs">Clubs</a>
+        <a href="#requests" class="nav-link" id="navRequests">Requests</a>
+        <a href="#leaderboard" class="nav-link" id="navLeaderboard">Leaderboard</a>
+        <a href="#admin" class="nav-link" id="navAdmin">Admin</a>
+        <a href="http://localhost:5173/profile" class="nav-link" id="navProfile">My Profile</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="notification-btn" id="notifBtn" aria-label="Notifications">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-dot" id="notifDot"></span>
+        </button>
+        <a href="http://localhost:5173" class="avatar-btn" id="avatarBtn">AK</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-dot"></span> Now live at your college
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        Learn. Teach.<br />
+        <span class="accent-purple">Grow</span> together with<br />
+        <span class="accent-green">ClubConnect</span>
+      </h1>
+      <p class="hero-subtitle" id="heroSubtitle">
+        Connect with peers across clubs, showcase your skills, and build a<br />
+        reputation that follows you beyond campus. Built on React + Firebase.
+      </p>
+      <div class="hero-cta" id="heroCta">
+        <a href="http://localhost:5173/discover" class="btn-primary" id="discoverBtn">
+          <span class="btn-dot"></span> Discover Skills
+        </a>
+        <a href="http://localhost:5173/clubs" class="btn-secondary" id="browseBtn">
+          Browse Clubs →
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-card" id="statsCard">
+        <div class="stat-item" id="statStudents">
+          <span class="stat-number purple" data-target="1240" id="countStudents">0</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="statClubs">
+          <span class="stat-number green" data-target="38" id="countClubs">0</span>
+          <span class="stat-label">Active Clubs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="statSkills">
+          <span class="stat-number orange" data-target="860" id="countSkills">0</span>
+          <span class="stat-label">Skills Listed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="statExchanges">
+          <span class="stat-number red" data-target="412" id="countExchanges">0</span>
+          <span class="stat-label">Exchanges Done</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DISCOVER SECTION ===== -->
+    <section class="section" id="discover">
+      <div class="section-container">
+        <div class="section-badge">Discover Skills</div>
+        <h2 class="section-title">Find Your <span class="accent-purple">Perfect Match</span></h2>
+        <p class="section-sub">Browse skills from students across every discipline.</p>
+        <div class="cards-grid" id="discoverGrid">
+          <div class="skill-card" id="skillCard1">
+            <div class="skill-icon" style="background:#ede9fe;">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Learn Figma, wireframing &amp; prototyping from senior designers.</p>
+            <span class="skill-tag">Design</span>
+            <a href="http://localhost:5173/discover" class="card-link">Learn More →</a>
+          </div>
+          <div class="skill-card" id="skillCard2">
+            <div class="skill-icon" style="background:#dcfce7;">💻</div>
+            <h3>Web Development</h3>
+            <p>Master React, Node.js, and full-stack development basics.</p>
+            <span class="skill-tag green">Tech</span>
+            <a href="http://localhost:5173/discover" class="card-link">Learn More →</a>
+          </div>
+          <div class="skill-card" id="skillCard3">
+            <div class="skill-icon" style="background:#fef3c7;">📸</div>
+            <h3>Photography</h3>
+            <p>Composition, lighting, and post-processing masterclasses.</p>
+            <span class="skill-tag orange">Creative</span>
+            <a href="http://localhost:5173/discover" class="card-link">Learn More →</a>
+          </div>
+          <div class="skill-card" id="skillCard4">
+            <div class="skill-icon" style="background:#fee2e2;">🎵</div>
+            <h3>Music Production</h3>
+            <p>DAW basics, sound design, and music theory fundamentals.</p>
+            <span class="skill-tag red">Arts</span>
+            <a href="http://localhost:5173/discover" class="card-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLUBS SECTION ===== -->
+    <section class="section alt-bg" id="clubs">
+      <div class="section-container">
+        <div class="section-badge">Active Clubs</div>
+        <h2 class="section-title">Join a <span class="accent-green">Club</span></h2>
+        <p class="section-sub">38 active clubs. Find your people.</p>
+        <div class="clubs-grid" id="clubsGrid">
+          <div class="club-card" id="clubCard1">
+            <div class="club-header" style="background: linear-gradient(135deg,#7c3aed,#4f46e5);">
+              <span class="club-emoji">🤖</span>
+            </div>
+            <div class="club-body">
+              <h3>AI & ML Club</h3>
+              <p>Explore machine learning, deep learning, and AI applications.</p>
+              <div class="club-meta"><span>👥 120 members</span><a href="http://localhost:5173/clubs" class="join-btn" id="joinBtn1">Join</a></div>
+            </div>
+          </div>
+          <div class="club-card" id="clubCard2">
+            <div class="club-header" style="background: linear-gradient(135deg,#059669,#10b981);">
+              <span class="club-emoji">🌱</span>
+            </div>
+            <div class="club-body">
+              <h3>Green Campus</h3>
+              <p>Sustainability, eco-projects, and environmental advocacy on campus.</p>
+              <div class="club-meta"><span>👥 85 members</span><a href="http://localhost:5173/clubs" class="join-btn" id="joinBtn2">Join</a></div>
+            </div>
+          </div>
+          <div class="club-card" id="clubCard3">
+            <div class="club-header" style="background: linear-gradient(135deg,#f59e0b,#f97316);">
+              <span class="club-emoji">📷</span>
+            </div>
+            <div class="club-body">
+              <h3>Photography Club</h3>
+              <p>Weekly shoots, contests, and darkroom workshops for all levels.</p>
+              <div class="club-meta"><span>👥 64 members</span><a href="http://localhost:5173/clubs" class="join-btn" id="joinBtn3">Join</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEADERBOARD SECTION ===== -->
+    <section class="section" id="leaderboard">
+      <div class="section-container">
+        <div class="section-badge">Leaderboard</div>
+        <h2 class="section-title">Top <span class="accent-purple">Contributors</span></h2>
+        <p class="section-sub">Students who share the most and help the community grow.</p>
+        <div class="leaderboard-table" id="leaderboardTable">
+          <div class="lb-header">
+            <span>Rank</span><span>Student</span><span>Skills</span><span>Exchanges</span><span>Points</span>
+          </div>
+          <div class="lb-row gold" id="lbRow1">
+            <span class="rank">🥇</span>
+            <span class="lb-name"><div class="lb-avatar" style="background:#7c3aed;">AK</div> Arjun Kumar</span>
+            <span>12</span><span>48</span><span class="points purple">980</span>
+          </div>
+          <div class="lb-row silver" id="lbRow2">
+            <span class="rank">🥈</span>
+            <span class="lb-name"><div class="lb-avatar" style="background:#059669;">PS</div> Priya Sharma</span>
+            <span>9</span><span>36</span><span class="points green">845</span>
+          </div>
+          <div class="lb-row bronze" id="lbRow3">
+            <span class="rank">🥉</span>
+            <span class="lb-name"><div class="lb-avatar" style="background:#f59e0b;">RV</div> Rahul Verma</span>
+            <span>7</span><span>29</span><span class="points orange">712</span>
+          </div>
+          <div class="lb-row" id="lbRow4">
+            <span class="rank">4</span>
+            <span class="lb-name"><div class="lb-avatar" style="background:#ef4444;">SM</div> Sneha M.</span>
+            <span>6</span><span>22</span><span class="points red">634</span>
+          </div>
+        </div>
+        <a href="http://localhost:5173/leaderboard" class="view-all-btn" id="viewAllBtn">View Full Leaderboard →</a>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="requests">
+      <div class="cta-inner" id="ctaInner">
+        <h2>Ready to grow?</h2>
+        <p>Join thousands of students already sharing skills on ClubConnect.</p>
+        <a href="http://localhost:5173/signup" class="btn-primary large" id="signupCta">Get Started Free →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <span class="nav-logo">ClubConnect</span>
+      <p>© 2026 ClubConnect. Built with React + Firebase.</p>
+      <div class="footer-links">
+        <a href="#home" id="ftHome">Home</a>
+        <a href="#discover" id="ftDiscover">Discover</a>
+        <a href="#clubs" id="ftClubs">Clubs</a>
+        <a href="http://localhost:5173" id="ftApp">Open App</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
